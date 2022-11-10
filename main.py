@@ -1,4 +1,4 @@
-from games import quiz_game
+from games import quiz_game, guessing_Game
 
 #playerName = (input("Hello please enter your name "))
 gameActive = (input("Type yes to Start Game ").lower())
@@ -11,6 +11,8 @@ game_option = input("1. Quiz Game\n2. Guess the Number\n3. Rock Paper Scissors\n
       
 if game_option == "1":
     quiz_game()
+if game_option == "2":
+    guessing_Game()
 else:
     ("Try again next time")
     quit()

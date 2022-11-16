@@ -57,11 +57,30 @@ def guessing_Game():
             
         if user_guess == random_number:
             print("You got it right!")
-            break   
+            break  
+        elif user_guess > random_number:
+             print("Too high")
         else:
-            if user_guess > random_number:
-                print("Too high")
-                continue
-            else:
-                print("Too Low")
-                continue
+            print("Too low")
+        # else:
+        #     if user_guess > random_number:
+        #         print("Too high")
+        #         continue
+        #     else:
+        #         print("Too Low")
+        #         continue
+                
+def rps():
+    user_wins = 0
+    computer_wins = 0
+    options = ["rock", "paper", "scissors"]
+    while True:
+        user_input = input("Type Rock, Paper, Scissors or Q to quit ").lower()
+        if user_input == "q":
+            break
+            
+        if user_input not in options: # Checking if user input is not in the list
+            continue # Will continue till user types a valid choice
+        
+        random_number = random.randint(0,2) # 0 rock, 1, paper, 2 scissors
+    print("Goodbye")
